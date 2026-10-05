@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: finlit-copilot
+    runtime: node
+    plan: free
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: APP_BASE_URL
+        sync: false
+      - key: APP_PASSCODE
+        sync: false
+      - key: KITE_API_KEY
+        sync: false
+      - key: KITE_API_SECRET
+        sync: false
+      - key: KITE_MARKET_DATA
+        value: "false"
+      - key: NTFY_TOPIC
+        sync: false
+      - key: PUSHOVER_APP_TOKEN
+        sync: false
+      - key: PUSHOVER_USER_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: MARKETAUX_TOKEN
+        sync: false

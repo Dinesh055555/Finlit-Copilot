@@ -1,0 +1,9 @@
+{
+  "name": "FinLit Co-Pilot",
+  "short_name": "Co-Pilot",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F8FA",
+  "theme_color": "#387ED1",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

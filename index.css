@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body { @apply bg-canvas text-ink font-sans antialiased; font-feature-settings: "cv11", "ss01"; }
+.num { font-variant-numeric: tabular-nums; }
+.panel { @apply bg-white border border-line rounded-md; }
+.btn { @apply inline-flex items-center justify-center gap-2 rounded px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 disabled:opacity-50; }
+.btn-primary { @apply btn bg-brand text-white hover:bg-brand-dark; }
+.btn-ghost { @apply btn text-ink hover:bg-canvas border border-line bg-white; }
+.btn-sell { @apply btn bg-down text-white hover:brightness-95; }
+.input { @apply w-full rounded border border-line bg-white px-3 py-2 text-sm text-strong focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand; }
+.label { @apply text-xs font-medium text-mute; }
+.tab { @apply px-3 py-2 text-sm text-mute border-b-2 border-transparent hover:text-strong; }
+.tab-on { @apply text-brand border-brand; }
+.chip { @apply inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium whitespace-nowrap; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+@keyframes sheetIn { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+.sheet-in { animation: sheetIn .22s ease-out; }
+@keyframes ring { 0%, 100% { box-shadow: 0 0 0 0 rgba(217,83,79,.45); } 50% { box-shadow: 0 0 0 14px rgba(217,83,79,0); } }
+.ring-pulse { animation: ring 1.2s infinite; }
